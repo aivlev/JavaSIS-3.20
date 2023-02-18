@@ -18,7 +18,7 @@ public class Unit1 {
         int length = INPUT_STRING.length();
         int i;
         StringBuilder temp = new StringBuilder();
-        for (i = length -1; i >= 0; i--) {
+        for (i = length -1; i >= 0; i--)  {
             temp.append(INPUT_STRING.charAt(i));
         }
         return temp.toString();
