@@ -15,10 +15,17 @@ public class Unit1 {
      * При реализации метода нельзя использовать метод reverse() из класса StringBuilder
      */
     private static String revertString() {
-        return "";
+        int length = INPUT_STRING.length();
+        int i;
+        StringBuilder temp = new StringBuilder();
+        for (i = length -1; i >= 0; i--) {
+            temp.append(INPUT_STRING.charAt(i));
+        }
+        return temp.toString();
     }
 
     private static void checkResult(String result) {
+        System.out.println(result);
         if (INPUT_STRING.equals(new StringBuilder(result).reverse().toString())) {
             System.out.println("Строка изменена корректно");
         } else {
